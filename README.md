@@ -9,9 +9,15 @@ for repetitive code on redux actions as a POC (_proof of concept_).
 
 Note: for real-world applications, conside using [Redux Toolkit](https://redux.js.org/redux-toolkit/overview) instead.
 
+## Running the app
+
+- `yarn install`
+- `yarn run dev`
+
 ## Presentation progress
 
-Use `git tag` present the application in different development states, before and after the changes.
+Use `git checkout` present the application in different development states, before and after the changes, the
+following tags were created for that purpose.
 
 ```
 slide-001-standard-redux
