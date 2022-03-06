@@ -1,13 +1,13 @@
-import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import Link from 'next/link'
-import { startClock } from '../actions'
 import Examples from '../components/examples'
+import Link from 'next/link'
+import actionCreators from '../action-creators'
+import { useDispatch } from 'react-redux'
+import { useEffect } from 'react'
 
 const Index = () => {
   const dispatch = useDispatch()
   useEffect(() => {
-    dispatch(startClock())
+    dispatch(actionCreators.startClock())
   }, [dispatch])
 
   return (

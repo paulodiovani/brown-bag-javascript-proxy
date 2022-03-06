@@ -1,12 +1,14 @@
+import * as existingActionCreators from './actions'
 import * as types from './types'
 import { isUndefined, omitBy, snakeCase } from 'lodash'
 
-// action creators that doesn't fit the standards dsl, if any
-const existingActionCreators = {}
-
 const missingActionCreators = {
   // standard action creators are catched by this method
-  get(_target, prop) {
+  get(target: typeof existingActionCreators, prop: string) {
+    if (typeof target[prop] !== 'undefined') {
+      return target[prop]
+    }
+
     /**
      * @function actionCreator
      * @param {object} payload action payload (optional)
