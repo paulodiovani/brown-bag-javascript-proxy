@@ -1,23 +1,12 @@
 import * as types from './types'
+import actionCreators from './action-creators'
 
 // INITIALIZES CLOCK ON SERVER
 export const serverRenderClock = () => (dispatch) =>
-  dispatch({
-    type: types.CLOCK_TICK,
-    payload: { light: false, ts: Date.now() },
-  })
+  dispatch(actionCreators.clockTick({ light: false, ts: Date.now() }))
 
 // INITIALIZES CLOCK ON CLIENT
 export const startClock = () => (dispatch) =>
   setInterval(() => {
-    dispatch({ type: types.CLOCK_TICK, payload: { light: true, ts: Date.now() } })
+    dispatch(actionCreators.clockTick({ light: true, ts: Date.now() }))
   }, 1000)
-
-// INCREMENT COUNTER BY 1
-export const incrementCount = () => ({ type: types.COUNTER_INCREMENT })
-
-// DECREMENT COUNTER BY 1
-export const decrementCount = () => ({ type: types.COUNTER_DECREMENT })
-
-// RESET COUNTER
-export const resetCount = () => ({ type: types.COUNTER_RESET })
