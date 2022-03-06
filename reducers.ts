@@ -4,11 +4,11 @@ import * as types from './types'
 // COUNTER REDUCER
 const counterReducer = (state = 0, { type }) => {
   switch (type) {
-    case types.INCREMENT:
+    case types.COUNTER_INCREMENT:
       return state + 1
-    case types.DECREMENT:
+    case types.COUNTER_DECREMENT:
       return state - 1
-    case types.RESET:
+    case types.COUNTER_RESET:
       return 0
     default:
       return state
@@ -24,7 +24,7 @@ const initialTimerState = {
 // TIMER REDUCER
 const timerReducer = (state = initialTimerState, { type, payload }) => {
   switch (type) {
-    case types.TICK:
+    case types.CLOCK_TICK:
       return {
         lastUpdate: payload.ts,
         light: !!payload.light,

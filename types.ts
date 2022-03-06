@@ -1,5 +1,5 @@
 // REDUX ACTION TYPES
-export const TICK = 'TICK'
-export const INCREMENT = 'INCREMENT'
-export const DECREMENT = 'DECREMENT'
-export const RESET = 'RESET'
+export const CLOCK_TICK = 'CLOCK_TICK'
+export const COUNTER_DECREMENT = 'COUNTER_DECREMENT'
+export const COUNTER_INCREMENT = 'COUNTER_INCREMENT'
+export const COUNTER_RESET = 'COUNTER_RESET'
