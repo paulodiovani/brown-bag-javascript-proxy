@@ -1,4 +1,3 @@
-import * as types from './types'
 import actionCreators from './action-creators'
 
 // INITIALIZES CLOCK ON SERVER
