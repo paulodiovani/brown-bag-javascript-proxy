@@ -1,3 +1,4 @@
+import { RootState } from '../reducers';
 import { useSelector } from 'react-redux'
 
 const formatTime = (time) => {
@@ -5,8 +6,8 @@ const formatTime = (time) => {
 }
 
 const Clock = () => {
-  const lastUpdate = useSelector((state) => state.timer.lastUpdate)
-  const light = useSelector((state) => state.timer.light)
+  const lastUpdate = useSelector((state: RootState) => state.timer.lastUpdate)
+  const light = useSelector((state: RootState) => state.timer.light)
   return (
     <div className={light ? 'light' : ''}>
       {formatTime(lastUpdate)}
