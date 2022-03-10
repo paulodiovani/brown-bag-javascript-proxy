@@ -16,7 +16,7 @@ Note: for real-world applications, conside using [Redux Toolkit](https://redux.j
 
 ## Presentation progress
 
-Use `git checkout` present the application in different development states, before and after the changes, the
+Use `git checkout` to present the application in different development states, before and after the changes, the
 following tags were created for that purpose.
 
 ```
